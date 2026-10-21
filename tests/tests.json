@@ -1,0 +1,75 @@
+[
+  {
+    "name": "Find and edit guidance",
+    "sanity": true,
+    "viewport": "desktop",
+    "covers": [
+      "guidance search",
+      "category filtering",
+      "standard editing",
+      "local persistence after refresh",
+      "example-content notice"
+    ],
+    "description": "Verifies searchable guidance can be updated and remains saved in the browser.",
+    "steps": [
+      "Open CAD guidance",
+      "Search for 'layer naming'",
+      "Open the matching article for editing",
+      "Change its title to 'Team layer rules' and save",
+      "Refresh the page"
+    ],
+    "expected": "The updated article appears in the library after refresh, with its category and tags retained."
+  },
+  {
+    "name": "Create and complete a drawing review checklist",
+    "viewport": "desktop",
+    "covers": [
+      "checklist creation",
+      "checklist run",
+      "progress tracking",
+      "frequent checklist usage"
+    ],
+    "description": "Verifies a reusable checklist can be created, run, and completed.",
+    "steps": [
+      "Open Review checklists",
+      "Build a checklist named 'Sheet issue check' with two steps",
+      "Start the new checklist",
+      "Complete both steps"
+    ],
+    "expected": "The checklist is saved, its progress reaches 2 of 2, and the review complete message appears."
+  },
+  {
+    "name": "Filter guidance and clear an empty result on mobile",
+    "viewport": "mobile",
+    "covers": [
+      "responsive mobile layout",
+      "tag search",
+      "empty state",
+      "clear filters"
+    ],
+    "description": "Checks mobile search and recovery from a query with no matches.",
+    "steps": [
+      "Open CAD guidance on a mobile viewport",
+      "Search for 'no-such-standard'",
+      "Verify the empty result message appears",
+      "Select Clear filters"
+    ],
+    "expected": "The empty state appears for the unmatched query, then the guidance cards return after clearing filters."
+  },
+  {
+    "name": "Reject incomplete guidance without losing existing content",
+    "viewport": "desktop",
+    "covers": [
+      "required-field validation",
+      "error prevention",
+      "existing example standards remain available"
+    ],
+    "description": "Ensures required article fields prevent incomplete guidance from being saved.",
+    "steps": [
+      "Open Manage and choose Add guidance",
+      "Enter a title but leave the short description and guidance empty",
+      "Submit the form"
+    ],
+    "expected": "The form requires the missing fields and no incomplete article is added to the library."
+  }
+]
